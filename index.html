@@ -1,0 +1,21 @@
+---
+layout: page_title
+title: <i class="fa fa-home fa-lg"></i>
+titlename: 首页
+---
+<!--<br>--> 
+<center><h3><font color="#000080">做任何事要做到让自己满意。</font></h3></center>
+<div class="row">
+  <div class="col-md-12">
+    <div class="panel panel-primary">
+      <div class="panel-heading">{{ site.locals.newest }}</div>
+      {% for post in paginator.posts %}
+        <a  href='{{ post.url }}' class="list-group-item pjaxlink clearfix">
+          {{post.title}}
+          <!--span class="badge">{{ post.date | date:"%Y年%m月%d日" }}</span-->
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+ 
