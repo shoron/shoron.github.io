@@ -1,7 +1,7 @@
 ---
 layout: post
 title: AutoLayout Programming Guide 翻译(一)
-category: "IOS"
+category: 翻译
 tags: 翻译 IOS官网文档
 keywords: 
 description:
