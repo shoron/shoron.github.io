@@ -1,6 +1,6 @@
 ---
 layout: post
-title: AutoLayout Programming Guide 翻译(二)
+title: AutoLayout Programming Guide 翻译(二)之使用自动布局技术
 category: 翻译
 tags: 翻译 IOS官网文档
 keywords: 
