@@ -16,7 +16,8 @@ Auto Layout 是一个可以让你的App的用户界面通过创建一个元素�
 典型的创建用户界面的流程是通过使用界面生成器来创建，调整大小和自定义你的视图和控件。当你对当前视图或者控件的位置和设置满意的时候就可以开始添加自动布局的约束了，以便你的界面可以适应方向，大小和定位的变化。
 
 在Xcode5中Auto Layout提供了强大的工作流来快速容易的创建和维护在OSX和IOS中的应用。在Xcode5中你可以：   
-> - 添加约束当你准备好的时候。  
+
+- 添加约束当你准备好的时候。  
 - 使用Control－drag或者菜单选项来快速的添加约束。  
 - 分别更新约束和框架的大小。  
 - 为动态的视图指定占位符约束.   
@@ -28,17 +29,18 @@ Auto Layout的基本构建模块是constraint(约束)。约束表达了你的界
 
 ### 约束的基础 ###
 你可以把一个约束当作符合人的表达习惯的一个表达式。例如如果你定义一个按钮的位置，你可能想说“按钮的左侧边缘应该距离它的父视图的左侧边缘20个点”。更正式地说，这个按钮点约束应该是：`button.left = (container.left + 20)`,这是从`y ＝ m*x + b`表达式中转化来的。在这   
-> - x 和 y是视图的属性。    
-- m 和 b是float值.
 
+- x 和 y是视图的属性。    
+- m 和 b是float值.   
 
 属性包括：`left, right, top, bottom, leading, trailing, width, height, centerX, centerY`和`baseline`。在从左到右到语言（例如英语）中leading，trailing和left，right是一样的，但是在从右到左的语言（例如希伯来语和阿拉伯语）中，leading，trailing和right left是一致的。当你创建约束的时候默认使用leading和trailing。你通常都应该用leading，trailing来确保你的界面在所有语言中都是合适的，除非你正在创建的约束可以在任何语言中都保持一致。
 
 
-约束的属性有：   
-> - 常量（Constant Value）：约束在物理上的大小和位移（offset）的点数.   
+约束的属性有：  
+
+- 常量（Constant Value）：约束在物理上的大小和位移（offset）的点数.   
 - 关系（Relation） ：Auto Layout 在视图属性上不仅仅支持约束常量。你可以使用关系和不平等（例如：大于等于，小于等于）。例如一个视图点宽度 >= 20 或者 textView。leading >= (superview.leading + 20).   
--  优先级（Priority Level）。约束有一个优先级。拥有高优先级的约束比低优先级的约束要更优先满足。默认的优先级别是要求的（NSLayoutPriorityRequired），这意味着这个约束必须被精确的适配。Layout系统尽可能的去适配一些可选的约束，哪怕他们不被适配也可以。优先级允许你来表达有用的有条件的行为。例如：它们可以用来描述以下行为：一些控件在没有更重要的优先级的情况下应该适应它的内容的大小。关于优先级的更多的信息请参考 NSLayoutPriority.
+- 优先级（Priority Level）。约束有一个优先级。拥有高优先级的约束比低优先级的约束要更优先满足。默认的优先级别是要求的（NSLayoutPriorityRequired），这意味着这个约束必须被精确的适配。Layout系统尽可能的去适配一些可选的约束，哪怕他们不被适配也可以。优先级允许你来表达有用的有条件的行为。例如：它们可以用来描述以下行为：一些控件在没有更重要的优先级的情况下应该适应它的内容的大小。关于优先级的更多的信息请参考 NSLayoutPriority.
 
 约束是可以累积的，不会互相覆盖。当你在有一个已经存在的约束时，设置另一个同一类型点约束时不会覆盖掉之前的约束。例如：给视图设置另外一个宽度约束不会移除或者改变第一个宽度约束－你需要手动的移除掉第一个约束。
 
@@ -55,14 +57,12 @@ Auto Layout结构分配了控制器和视图之间的布局的责任。与其写
 
 #### 控制器的角色 ####
 
-尽管一个视图指定其内在内容的大小，视图的使用者决定它的优先级。例如在默认情况下一个按钮
-> - 强烈的希望一个按钮可以自然展示它在垂直方向上的内容（按钮也真的应该是它们的自然高度）
+尽管一个视图指定其内在内容的大小，视图的使用者决定它的优先级。例如在默认情况下一个按钮  
+
+- 强烈的希望一个按钮可以自然展示它在垂直方向上的内容（按钮也真的应该是它们的自然高度）
 - 不是那么强烈的希望自然展示它的内容。（标题和内容之间的空隙是可以接受的）
 - 强烈抵抗水平和垂直方向上裁减内容
 例如在用户界面上包含互相挨着的两个按钮，这是由控制器来决定当有额外的空间的时候这两个按钮是否应该变长。是否是只有其中一个按钮变长？是否两个按钮等同增长？又或者它俩保持一定的比例？如果没有足够的空间来适应两个按钮不压缩裁减内容，是否其中一个按钮应该变短，或者都变短，等等。  
 
-你可以用`setContentHuggingPriority:forAxis:`and`setContentCompressionResistancePriority:forAxis:`来设置一个视图的实例的延展性和压缩性。默认情况下所有的UIKit和AppKit都提供了的视图都有`NSLayoutPriorityDefaultHigh`和`NSLayoutPriorityDefaultLow`的值。
-
-
-
+你可以用`setContentHuggingPriority:forAxis:`和`setContentCompressionResistancePriority:forAxis:`来设置一个视图的实例的延展性和压缩性。默认情况下所有的UIKit和AppKit都提供了的视图都有`NSLayoutPriorityDefaultHigh`和`NSLayoutPriorityDefaultLow`的值。
 
