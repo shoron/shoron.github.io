@@ -7,6 +7,8 @@ keywords:
 description:
 ---
 
+[原文链接](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/AutolayoutPG/ImplementingView/ImplementingView.html#//apple_ref/doc/uid/TP40010853-CH16-SW1)。   
+
 ## 自动布局的实例 ##
 
 自动布局技术通过视图的自我管理降低了控制器的负担。如果你实现了一个自定义的视图，你必须提供足够的信息以便自动布局系统能够做出正确的计算和满足约束条件。特别是，应该确定这个视图有一个内在的大小，如果是这样的话，实现`intrinsicContentSize`来返回一个合适的值。  

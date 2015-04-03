@@ -7,6 +7,8 @@ keywords:
 description:
 ---
 
+[原文链接](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/AutolayoutPG/ResolvingIssues/ResolvingIssues.html#//apple_ref/doc/uid/TP40010853-CH17-SW1)。   
+
 ## 解决自动布局的问题 ##
 当你创建有冲突的约束，当你没有提供足够的约束，或者当你最终使用一组有歧义的约束的时候，自动布局会出问题。当自动布局出问题时，自动布局系统会尝试降低自己来尽可能优雅的让你的app保持可用的状态。但是在开发环境中捕捉自动布局的问题十分重要。自动布局提供几个特色来帮助你找到并解决问题的源头，包括界面编辑器的可见的提示，这会确定哪些问题已经发生。这样就可以用适当的解决方案解决它。  
 

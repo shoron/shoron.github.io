@@ -7,6 +7,8 @@ keywords:
 description:
 ---
 
+[原文链接](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/AutolayoutPG/WorkingwithConstraints/WorkingwithConstraints.html#//apple_ref/doc/uid/TP40010853-CH8-SW1)。   
+
 ## 在界面编辑器中使用约束 ##
 
 添加，编辑或者移除约束的最容易的方式是用界面编辑器的可视化布局工具。创建一个约束就像在两个视图之间拖拽一样简单，一次添加多个约束的时候你可以简单的使用各种弹出窗口

@@ -7,6 +7,8 @@ keywords:
 description:
 ---
 
+[原文链接](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/AutolayoutPG/AutoLayoutbyExample/AutoLayoutbyExample.html#//apple_ref/doc/uid/TP40010853-CH5-SW1)。   
+
 ## 自动布局的实例 ##
 自动布局可以很容易的解决很多复杂的布局问题，不需要手动视图操作。通过创建正确的约束的组合，你可以创建传统上难以管理的代码所创造出来的布局，如方向和大小的变化的同时保持间距不变，滚动视图内的元件影响滚动的内容的大小，或者滚动视图内的元素不随着内容的滚动而滚动。   
 
