@@ -124,7 +124,8 @@ description:
      [containerView layoutIfNeeded]; // Forces the layout of the subtree animation block and then captures all of the frame changes
 	}];  
 
-在`OSX`中，当使用层支持的动画的时候，用下面的代码：  
+在`OSX`中，当使用层支持的动画的时候，用下面的代码：   
+
 	[containterView layoutIfNeeded];
 	NSAnimationContext runAnimationGroup:^(NSAnimationContext *context) {
      [context setAllowsImplicitAnimation: YES];
