@@ -1,13 +1,13 @@
 ---
 layout: post
-title: UIView Bugs
+title: 知识点总结
 category: "Bugs"
 tags: IOS Bugs
 keywords: Bugs
 description: 
 ---
 
-这篇文章中整理的都是一些自己开发中遇到的小的问题点。
+这篇文章中整理的都是一些自己开发中遇到的小的问题点。自己当作知识点总结一下。
 
 #### UIView的alpha值 #######
 
