@@ -41,6 +41,6 @@ description:
 
 视图是应用程序中的关键的手势和触摸事件的接收者，关于更多的是用手势和处理触摸事件的信息，请参考 [IOS事件处理指南](https://developer.apple.com/library/ios/documentation/EventHandling/Conceptual/EventHandlingiPhoneOS/Introduction/Introduction.html#//apple_ref/doc/uid/TP40009541)   
 
-自定义的视图必须使用现有的绘制技术来展示它的内容。关于更多的在IOS应用程序中使用这些技术来绘制视图，请参考 [IOS应用程序编程指南](https://developer.apple.com/library/ios/documentation/2DDrawing/Conceptual/DrawingPrintingiOS/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010156)   
+自定义的视图必须使用现有的绘制技术来展示它的内容。关于更多的在IOS应用程序中使用这些技术来绘制视图，请参考 [绘制和打印编程指南](https://developer.apple.com/library/ios/documentation/2DDrawing/Conceptual/DrawingPrintingiOS/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010156)   
 
 当标准视图动画不够使用的时候你可以使用核心动画技术，关于如何使用核心动画技术来实现动画请参考 [核心动画编程指南](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/CoreAnimation_guide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40004514)   
