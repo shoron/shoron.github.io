@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ViewController Programming Guide For IOS（二）窗口
+title: View Programming Guide For IOS（二）窗口
 category: IOS
 tags: IOS IOS官网文档
 keywords: 
