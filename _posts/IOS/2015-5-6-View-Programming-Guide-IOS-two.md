@@ -22,7 +22,7 @@ description:
 5. 如果想在额外的窗口上显示内容，需要创建一个额外的窗口。创建的窗口默认是和屏幕一样大小的。当连接上额外的屏幕的时候会给应用发送相应的连接和断开连接的通知.当你的程序在活跃的时候连接了一个新的显示设备，此时你应该给这个新的显示设备显示一些内容。可以不必是你最终要显示的内容，否则的话，这个新的设备会是一个黑屏。
 	<pre>
 	设置收到连接，断开连接的通知
-	NSNotificationCenter* center = [NSNotificationCenter defaultCenter];
+	NSNotificationCenter \*center = [NSNotificationCenter defaultCenter];
     [center addObserver:self selector:@selector(handleScreenConnectNotification:) name:UIScreenDidConnectNotification object:nil];
     [center addObserver:self selector:@selector(handleScreenDisconnectNotification:) name:UIScreenDidDisconnectNotification object:nil];  
     处理连接的通知
