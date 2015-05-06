@@ -1,8 +1,8 @@
 ---
 layout: post
 title: ViewController Programming Guide For IOS 翻译(一)之视图控制器介绍和基础
-category: 翻译
-tags: 翻译 IOS官网文档
+category: IOS
+tags: IOS IOS官网文档
 keywords: 
 description:
 ---

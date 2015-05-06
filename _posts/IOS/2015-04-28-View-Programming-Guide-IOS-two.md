@@ -1,8 +1,8 @@
 ---
 layout: post
 title: View Programming Guide For IOS 翻译(二)之窗口和视图结构
-category: 翻译
-tags: 翻译 IOS官网文档
+category: IOS
+tags: IOS IOS官网文档
 keywords: 
 description:
 ---
