@@ -20,12 +20,12 @@ description:
 	* UIWindowDidBecomeKeyNotification
 	* UIWindowDidResignKeyNotification
 5. 如果想在额外的窗口上显示内容，需要创建一个额外的窗口。创建的窗口默认是和屏幕一样大小的。当连接上额外的屏幕的时候会给应用发送相应的连接和断开连接的通知.当你的程序在活跃的时候连接了一个新的显示设备，此时你应该给这个新的显示设备显示一些内容。可以不必是你最终要显示的内容，否则的话，这个新的设备会是一个黑屏。
-	<pre>
-	设置收到连接，断开连接的通知
+	<pre><code>
+	//设置收到连接，断开连接的通知
 	NSNotificationCenter \*center = [NSNotificationCenter defaultCenter];
     [center addObserver:self selector:@selector(handleScreenConnectNotification:) name:UIScreenDidConnectNotification object:nil];
     [center addObserver:self selector:@selector(handleScreenDisconnectNotification:) name:UIScreenDidDisconnectNotification object:nil];  
-    处理连接的通知
+    //处理连接的通知
     -(void)handleScreenConnectNotification:(NSNotification\*)aNotification {
         UIScreen \*newScreen = [aNotification object];
         CGRect screenBounds = newScreen.bounds;
@@ -35,7 +35,7 @@ description:
             [viewController displaySelectionInSecondaryWindow:_secondWindow];
         }
     }  
-	处理断开连接的通知
+	//处理断开连接的通知
     -(void)handleScreenDisconnectNotification:(NSNotification*)aNotification {
         if (_secondWindow){
             // Hide and then delete the window.
@@ -45,6 +45,6 @@ description:
             [viewController displaySelectionOnMainScreen];
         }
     }
-         
+    </code></pre>  
 6. 在展示一个窗口之前必须把它和一个屏幕关联起来。
 7. 如果你想用一个非默认的屏幕模式，你应该在关联屏幕和窗口之前应用它。在UIScreenMode中定义了耽搁屏幕模式的属性。
