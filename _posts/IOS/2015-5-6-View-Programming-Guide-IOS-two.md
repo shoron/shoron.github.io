@@ -23,10 +23,8 @@ description:
 	<pre>
 	设置收到连接，断开连接的通知
 	NSNotificationCenter* center = [NSNotificationCenter defaultCenter];
-    [center addObserver:self selector:@selector(handleScreenConnectNotification:)
-            name:UIScreenDidConnectNotification object:nil];
-    [center addObserver:self selector:@selector(handleScreenDisconnectNotification:)
-            name:UIScreenDidDisconnectNotification object:nil];
+    [center addObserver:self selector:@selector(handleScreenConnectNotification:) name:UIScreenDidConnectNotification object:nil];
+    [center addObserver:self selector:@selector(handleScreenDisconnectNotification:) name:UIScreenDidDisconnectNotification object:nil];
     处理连接的通知
     -(void)handleScreenConnectNotification:(NSNotification\*)aNotification {
     UIScreen \*newScreen = [aNotification object];
