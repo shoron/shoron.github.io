@@ -24,27 +24,27 @@ description:
 	设置收到连接，断开连接的通知
 	NSNotificationCenter* center = [NSNotificationCenter defaultCenter];
     [center addObserver:self selector:@selector(handleScreenConnectNotification:) name:UIScreenDidConnectNotification object:nil];
-    [center addObserver:self selector:@selector(handleScreenDisconnectNotification:) name:UIScreenDidDisconnectNotification object:nil];
+    [center addObserver:self selector:@selector(handleScreenDisconnectNotification:) name:UIScreenDidDisconnectNotification object:nil];  
     处理连接的通知
     -(void)handleScreenConnectNotification:(NSNotification\*)aNotification {
-    UIScreen \*newScreen = [aNotification object];
-    CGRect screenBounds = newScreen.bounds;
-    if (!_secondWindow) {
-        _secondWindow = [[UIWindow alloc] initWithFrame:screenBounds];
-        _secondWindow.screen = newScreen;
-        [viewController displaySelectionInSecondaryWindow:_secondWindow];
-    }
-}
+        UIScreen \*newScreen = [aNotification object];
+        CGRect screenBounds = newScreen.bounds;
+        if (!_secondWindow) {
+            _secondWindow = [[UIWindow alloc] initWithFrame:screenBounds];
+            _secondWindow.screen = newScreen;
+            [viewController displaySelectionInSecondaryWindow:_secondWindow];
+        }
+    }  
 	处理断开连接的通知
--(void)handleScreenDisconnectNotification:(NSNotification*)aNotification {
-    if (_secondWindow){
-        // Hide and then delete the window.
-        _secondWindow.hidden = YES;
-        [_secondWindow release];
-        _secondWindow = nil;
-        [viewController displaySelectionOnMainScreen];
+    -(void)handleScreenDisconnectNotification:(NSNotification*)aNotification {
+        if (_secondWindow){
+            // Hide and then delete the window.
+            _secondWindow.hidden = YES;
+            [_secondWindow release];
+            _secondWindow = nil;
+            [viewController displaySelectionOnMainScreen];
+        }
     }
-}
          
 6. 在展示一个窗口之前必须把它和一个屏幕关联起来。
 7. 如果你想用一个非默认的屏幕模式，你应该在关联屏幕和窗口之前应用它。在UIScreenMode中定义了耽搁屏幕模式的属性。
