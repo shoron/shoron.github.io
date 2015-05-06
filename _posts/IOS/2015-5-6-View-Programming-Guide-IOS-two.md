@@ -7,7 +7,7 @@ keywords:
 description:
 ---
 
-以下是从原文档中提炼的一些知识点
+以下是从[原文档](https://developer.apple.com/library/ios/documentation/WindowsViews/Conceptual/ViewPG_iPhoneOS/CreatingWindows/CreatingWindows.html#//apple_ref/doc/uid/TP40009503-CH4-SW1)中提炼的一些知识点
 
 1. 涉及到窗口的两个任务。
 	* 从窗口到坐标系统转换一个点或者矩形到一个特定的视图的坐标系统中（反之亦然）
