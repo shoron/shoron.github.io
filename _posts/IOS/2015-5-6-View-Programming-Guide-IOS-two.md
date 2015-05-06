@@ -27,7 +27,6 @@ description:
             name:UIScreenDidConnectNotification object:nil];
     [center addObserver:self selector:@selector(handleScreenDisconnectNotification:)
             name:UIScreenDidDisconnectNotification object:nil];
-            
     处理连接的通知
     -(void)handleScreenConnectNotification:(NSNotification\*)aNotification {
     UIScreen \*newScreen = [aNotification object];
