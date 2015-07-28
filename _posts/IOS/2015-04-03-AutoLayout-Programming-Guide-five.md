@@ -1,8 +1,8 @@
 ---
 layout: post
 title: AutoLayout Programming Guide 翻译(五)之在自定义视图中应用自动布局
-category: IOS
-tags: IOS IOS官网文档
+category: iOS
+tags: iOS iOS官网文档
 keywords: 
 description:
 ---

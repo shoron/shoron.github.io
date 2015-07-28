@@ -1,8 +1,8 @@
 ---
 layout: post
 title: AutoLayout Programming Guide 翻译(四)之自动布局的实例
-category: IOS
-tags: IOS IOS官网文档
+category: iOS
+tags: iOS iOS官网文档
 keywords: 
 description:
 ---
@@ -63,7 +63,7 @@ description:
 
 ![sv_textviewconstraints](/public/img/sv_textviewconstraints.png)    
 
-接下来的两个图展示了app在IOS模拟器的正常的和横屏的状态的情况。文本视图被约束在滚动视图的底部不会随着滚动视图的移动而移动。    
+接下来的两个图展示了app在 iOS 模拟器的正常的和横屏的状态的情况。文本视图被约束在滚动视图的底部不会随着滚动视图的移动而移动。    
 
 ![uiscrollview_bottom_sideways](/public/img/uiscrollview_bottom_sideways.png)     
 ![uiscrollview_bottom_vertical](/public/img/uiscrollview_bottom_vertical.png)     
@@ -114,9 +114,9 @@ description:
 ![es_horizontal](/public/img/es_horizontal.png)   
 
 ### 由自动布局产生的变化的动画 ###
-如果你需要完全的控制自动布局产生的变化的动画，你必须以编程的方式来改变你的约束。 在`IOS`和`OSX`的基本概念是一样的。但是也会有一些小的差异。  
+如果你需要完全的控制自动布局产生的变化的动画，你必须以编程的方式来改变你的约束。 在`iOS`和`OSX`的基本概念是一样的。但是也会有一些小的差异。  
 
-在你的IOS app中你的代码可能看起来像下面的：  
+在你的iOS app中你的代码可能看起来像下面的：  
 
 	[containerView layoutIfNeeded]; // Ensures that all pending layout operations have been completed
 	[UIView animateWithDuration:1.0 animations:^{

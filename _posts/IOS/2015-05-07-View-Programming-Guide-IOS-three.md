@@ -1,8 +1,8 @@
 ---
 layout: post
-title: View Programming Guide For IOS（三）视图
-category: IOS
-tags: IOS IOS官网文档
+title: View Programming Guide For iOS（三）视图
+category: iOS
+tags: iOS iOS官网文档
 keywords: 
 description:
 ---

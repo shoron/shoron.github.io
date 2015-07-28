@@ -1,8 +1,8 @@
 ---
 layout: post
-title: View Programming Guide For IOS 翻译(一)之窗口和视图
-category: IOS
-tags: IOS IOS官网文档
+title: View Programming Guide For iOS 翻译(一)之窗口和视图
+category: iOS
+tags: iOS iOS官网文档
 keywords: 
 description:
 ---
@@ -11,7 +11,7 @@ description:
 
 ## 关于窗口和视图 ##
 
-在IOS中，你使用窗口和视图在屏幕上来展示你的应用程序的内容。窗口没有任何可见的内容但是为你的应用程序提供了一个基本的视图的容器。视图定义了你想填充内容的窗口的一部分。例如你可能有一些视图用来显示图片，文本，图形或者这些的内容的一些组合。你也可以用一些视图来组织或者管理其他的视图。  
+在 iOS 中，你使用窗口和视图在屏幕上来展示你的应用程序的内容。窗口没有任何可见的内容但是为你的应用程序提供了一个基本的视图的容器。视图定义了你想填充内容的窗口的一部分。例如你可能有一些视图用来显示图片，文本，图形或者这些的内容的一些组合。你也可以用一些视图来组织或者管理其他的视图。  
 
 ### 总览 ###
 
@@ -31,16 +31,16 @@ description:
 
 界面编辑器是一个让你使用图形化的工具来配置应用程序的窗口和视图的应用程序。使用界面编辑器，你会在一个nib文件中配置你的视图，这会作为一个资源文件来存储一个特定版本的视图和其他对象。当你在运行时载入一个nib文件，存储在它里面的文件会被重新计算成你代码中的实际第对象，并以编程对方式操作。  
 
-界面编辑器会大大简化创建应用程序界面的工作。因为支持界面编辑器和nib文件是贯穿整个IOS系统的，一点要求就是把nib文件合并到应用程序的设计中去。
+界面编辑器会大大简化创建应用程序界面的工作。因为支持界面编辑器和nib文件是贯穿整个 iOS 系统的，一点要求就是把nib文件合并到应用程序的设计中去。
 
 ### 看看其他的 ####
 
 由于视图是非常复杂和灵活的对象，所以不太可能在一个文档中来覆盖它所有的行为。然后其他的文档可以帮助你了解其他方面的管理视图的内容以及把视图的相关知识联系起来作为一个整体。   
 
-视图控制器是管理应用程序的视图的一个很重要的部分。一个视图控制器管理一个视图等级结构中的所有视图，并把这些视图展示在屏幕上。关于视图控制器的更多知识，请参考 [IOS视图控制器编程指南](https://developer.apple.com/library/ios/featuredarticles/ViewControllerPGforiPhoneOS/Introduction/Introduction.html#//apple_ref/doc/uid/TP40007457)  
+视图控制器是管理应用程序的视图的一个很重要的部分。一个视图控制器管理一个视图等级结构中的所有视图，并把这些视图展示在屏幕上。关于视图控制器的更多知识，请参考 [iOS视图控制器编程指南](https://developer.apple.com/library/ios/featuredarticles/ViewControllerPGforiPhoneOS/Introduction/Introduction.html#//apple_ref/doc/uid/TP40007457)  
 
-视图是应用程序中的关键的手势和触摸事件的接收者，关于更多的是用手势和处理触摸事件的信息，请参考 [IOS事件处理指南](https://developer.apple.com/library/ios/documentation/EventHandling/Conceptual/EventHandlingiPhoneOS/Introduction/Introduction.html#//apple_ref/doc/uid/TP40009541)   
+视图是应用程序中的关键的手势和触摸事件的接收者，关于更多的是用手势和处理触摸事件的信息，请参考 [iOS事件处理指南](https://developer.apple.com/library/ios/documentation/EventHandling/Conceptual/EventHandlingiPhoneOS/Introduction/Introduction.html#//apple_ref/doc/uid/TP40009541)   
 
-自定义的视图必须使用现有的绘制技术来展示它的内容。关于更多的在IOS应用程序中使用这些技术来绘制视图，请参考 [绘制和打印编程指南](https://developer.apple.com/library/ios/documentation/2DDrawing/Conceptual/DrawingPrintingiOS/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010156)   
+自定义的视图必须使用现有的绘制技术来展示它的内容。关于更多的在 iOS 应用程序中使用这些技术来绘制视图，请参考 [绘制和打印编程指南](https://developer.apple.com/library/ios/documentation/2DDrawing/Conceptual/DrawingPrintingiOS/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010156)   
 
 当标准视图动画不够使用的时候你可以使用核心动画技术，关于如何使用核心动画技术来实现动画请参考 [核心动画编程指南](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/CoreAnimation_guide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40004514)   

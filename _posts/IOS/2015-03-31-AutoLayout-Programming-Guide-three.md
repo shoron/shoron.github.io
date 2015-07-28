@@ -1,8 +1,8 @@
 ---
 layout: post
 title: AutoLayout Programming Guide 翻译(三)之解决自动布局的问题
-category: IOS
-tags: IOS IOS官网文档
+category: iOS
+tags: iOS iOS官网文档
 keywords: 
 description:
 ---
@@ -105,7 +105,7 @@ description:
 **Important:** `_subtreeDescription`不是公开的API,然而它可以被用来调试。  
 2. 如果可能的话，在运行时重现这个问题。   
 3. 找到有问题的约束。  
-为了找到影响特定视图的约束可以在`OSX`中使用`constraintsAffectingLayoutForOrientation:`,在`IOS`中使用`constraintsAffectingLayoutForAxis:`.  
+为了找到影响特定视图的约束可以在`OSX`中使用`constraintsAffectingLayoutForOrientation:`,在`iOS`中使用`constraintsAffectingLayoutForAxis:`.  
 然后你可以在调试器中检查这些约束，调试器会用视觉形式语言的形式来打印约束的信息。如果你的视图有标识符，那么它打印出来的信息就像是这样的:  
   	`<NSLayoutConstraint: 0x400bef8e0 H:[refreshSegmentedControl]-(8)-[selectViewSegmentedControl] (Names: refreshSegmentedControl:0x40048a600, selectViewSegmentedControl:0x400487cc0 ) >`    
 或者像这样的：   

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 瀑布流CollectionView的实现过程
-category: IOS
+category: iOS
 tags: UICollectionView
 keywords: 
 description:

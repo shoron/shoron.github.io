@@ -1,7 +1,7 @@
 ---
 layout: post
 title: CollectionView 介绍
-category: IOS
+category: iOS
 tags: UICollectionView
 keywords: 
 description:
