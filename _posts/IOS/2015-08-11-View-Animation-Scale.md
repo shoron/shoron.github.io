@@ -10,7 +10,8 @@ description:
 ### iOS 视图缩放动画的两种方式 ###
     
 #### 单一缩放方式（由小到大或者由大到小） ####
-	
+	       
+        
 
 		CABasicAnimation *theAnimation;
 		theAnimation=[CABasicAnimation animationWithKeyPath:@"transform"];
@@ -19,17 +20,20 @@ description:
 		theAnimation.toValue = [NSNumber numberWithFloat:0.5];  // 结束时的缩放比例
  		[view.layer addAnimation:theAnimation forKey:@"animateTransform"];
 
+ 					
 
 #### 任意缩放 （可以由小到大再接着由大到小，可以循环变化）
-	
+	      
+         
+        
+		CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:@"transform"];
+   	 	NSMutableArray *values = [NSMutableArray array];
+    	[values addObject:[NSValue valueWithCATransform3D:CATransform3DMakeScale(0.2, 0.2, 1.0)]];
+    	[values addObject:[NSValue valueWithCATransform3D:CATransform3DMakeScale(1.3, 1.3, 1.0)]];
+    	[values addObject:[NSValue valueWithCATransform3D:CATransform3DMakeScale(1.0, 1.0, 1.0)]];
+    	animation.values = values;
+    	[view.layer addAnimation:animation forKey:@"scale-layer"];  
 
-	CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:@"transform"];
-    NSMutableArray *values = [NSMutableArray array];
-    [values addObject:[NSValue valueWithCATransform3D:CATransform3DMakeScale(0.2, 0.2, 1.0)]];
-    [values addObject:[NSValue valueWithCATransform3D:CATransform3DMakeScale(1.3, 1.3, 1.0)]];
-    [values addObject:[NSValue valueWithCATransform3D:CATransform3DMakeScale(1.0, 1.0, 1.0)]];
-    animation.values = values;
-    [view.layer addAnimation:animation forKey:@"scale-layer"];  
 
 
 #### 备注：####
