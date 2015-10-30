@@ -33,3 +33,4 @@ description:
         return newImage;
     }
 
+备注： 把绘图的部分要写在线程里。不要写的主线程。
